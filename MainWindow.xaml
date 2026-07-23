@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="GAVIMDataProcessing.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:GAVIMDataProcessing" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml" Title="GAVIM" Height="800" Width="1000">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="10" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="10" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="10" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="10" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="10" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="10" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Column="1" Grid.Row="1">
+      <TextBlock Text="GAVIM Data Processing" FontSize="18" FontWeight="Bold" Margin="5" />
+      <Button Name="ButtonTest" Content="Process" Height="30" Margin="5" Click="ButtonTest_Click" />
+      <Button Name="AbortButton" Content="Abort" Height="18" Margin="5" Click="AbortButtonClick" />
+      <CheckBox Name="IPMcheckBox" Content="Convert IPM" BorderThickness="5" />
+      <TextBlock Text="Raw Data Folder" FontWeight="Bold" Margin="5" />
+      <DockPanel Margin="5">
+        <TextBox Name="RawDataFolderSelected" MinWidth="200" />
+        <Button Name="RawDataBrowse" Content="Browse" Width="50" DockPanel.Dock="Right" HorizontalAlignment="Right" ToolTip="Click to browse for raw data folder to import" Click="RawDataBrowse_Click" />
+      </DockPanel>
+      <DockPanel Margin="2">
+        <TextBlock Text="STATUS:" VerticalAlignment="Center" TextAlignment="Left" FontWeight="Bold" Margin="5,0,5,0" />
+        <TextBlock Name="CodeTableStatus" VerticalAlignment="Center" TextAlignment="Left" />
+      </DockPanel>
+    </StackPanel>
+    <c1:C1FlexChart Name="UserPlot" Grid.Row="1" Grid.RowSpan="3" Grid.Column="3" LegendToggle="True" />
+  </Grid>
+</Window>

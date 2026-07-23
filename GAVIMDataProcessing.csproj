@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<AssemblyName>GAVIMDataProcessing</AssemblyName>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<OutputType>WinExe</OutputType>
+
+		<TargetFramework>net48</TargetFramework>
+
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+
+		<LangVersion>latest</LangVersion>
+
+		<Prefer32Bit>true</Prefer32Bit>
+
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RootNamespace />
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="GAVIMDataProcessing.exe.licenses" />
+		<EmbeddedResource Include="GAVIMDataProcessing.exe.licenses"
+						  LogicalName="GAVIMDataProcessing.exe.licenses" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="C1.WPF.4.5.2">
+			<HintPath>.\C1.WPF.4.5.2.dll</HintPath>
+		</Reference>
+
+		<Reference Include="C1.WPF.C1Chart.4.5.2">
+			<HintPath>.\C1.WPF.C1Chart.4.5.2.dll</HintPath>
+		</Reference>
+
+		<Reference Include="C1.WPF.DX.4.5.2">
+			<HintPath>.\C1.WPF.DX.4.5.2.dll</HintPath>
+		</Reference>
+
+		<Reference Include="C1.WPF.FlexChart.4.5.2">
+			<HintPath>.\C1.WPF.FlexChart.4.5.2.dll</HintPath>
+		</Reference>
+
+		<Reference Include="WindowsBase" />
+		<Reference Include="PresentationCore" />
+		<Reference Include="PresentationFramework" />
+		<Reference Include="System.Core" />
+	</ItemGroup>
+
+</Project>
